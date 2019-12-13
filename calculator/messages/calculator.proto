@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "calculatorpb";
+
+package calculator;
+
+message Calculation {
+	int32 operand0 = 2;
+	int32 operand1 = 3;
+}
+
+message CalculationRequest {
+	google.protobuf.Timestamp time = 1;
+	uint32 id = 2;
+	Calculation calculation = 3;
+}
+
+message CalculationResponse {
+	google.protobuf.Timestamp time = 1;
+	uint32 id = 2;
+	int32 result = 3;
+	string status = 4;
+	int32 code = 5;
+}
+
+service CalculatorService {
+	rpc add(CalculationRequest) returns (CalculationResponse) {} 
+}

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package noticboard;
+option go_package = "messageboardpb";
+
+message Notice {
+	string id = 1;
+	string from = 2;
+	string note = 3;
+}
+
+message PostNoticeRequest {
+	google.protobuf.Timestamp time = 1;
+	Notice note = 2;
+}
+
+message PostNoticeResponse {
+	string id = 1;
+	uint32 code = 2;
+	string status = 3;
+}
+
+message SubscribeRequest { }
+
+message SubscribeResponse {
+	google.protobuf.Timestamp time = 1;
+	Notice notice = 2;
+}
+
+service NoticeBoardService {
+	rpc Post(PostNoticeRequest) returns (PostNoticeResponse) {};
+	rpc Subscribe(SubscribeRequest) returns (stream SubscribeResponse) {};
+}
