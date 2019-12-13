@@ -9,7 +9,7 @@ import (
 	uuid "github.com/google/uuid"
 	grpc "google.golang.org/grpc"
 
-	pb "github.com/chukmunnlee/noticeboard/messages"
+	pb "github.com/chukmunnlee/grpc/noticeboard/messages"
 
 	ptypes "github.com/golang/protobuf/ptypes"
 )

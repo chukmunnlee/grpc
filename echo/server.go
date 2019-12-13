@@ -7,8 +7,10 @@ import (
 	"net"
 	"strings"
 	"context"
-	pb "github.com/chukmunnlee/echo/messages"
-	"google.golang.org/grpc"
+
+	pb "github.com/chukmunnlee/grpc/echo/messages"
+
+	grpc "google.golang.org/grpc"
 	ptypes "github.com/golang/protobuf/ptypes"
 )
 

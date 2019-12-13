@@ -6,7 +6,7 @@ import (
 	"io"
 	"context"
 
-	pb "github.com/chukmunnlee/noticeboard/messages"
+	pb "github.com/chukmunnlee/grpc/noticeboard/messages"
 
 	grpc "google.golang.org/grpc"
 )

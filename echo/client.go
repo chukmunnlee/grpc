@@ -10,7 +10,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	pb "github.com/chukmunnlee/echo/messages"
+	pb "github.com/chukmunnlee/grpc/echo/messages"
 	ptypes "github.com/golang/protobuf/ptypes"
 )
 

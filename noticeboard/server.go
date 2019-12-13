@@ -6,9 +6,9 @@ import (
 	"net"
 	"context"
 
-	pb "github.com/chukmunnlee/noticeboard/messages"
-	ptypes "github.com/golang/protobuf/ptypes"
+	pb "github.com/chukmunnlee/grpc/noticeboard/messages"
 
+	ptypes "github.com/golang/protobuf/ptypes"
 	grpc "google.golang.org/grpc"
 )
 

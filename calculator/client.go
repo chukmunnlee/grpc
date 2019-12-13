@@ -8,9 +8,9 @@ import (
 
 	"context"
 
-	pb "github.com/chukmunnlee/calculator/messages"
+	pb "github.com/chukmunnlee/grpc/calculator/messages"
 
-	"google.golang.org/grpc"
+	grpc "google.golang.org/grpc"
 	ptypes "github.com/golang/protobuf/ptypes"
 )
 
